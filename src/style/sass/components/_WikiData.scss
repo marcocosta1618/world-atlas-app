@@ -1,0 +1,35 @@
+@import "../variables";
+
+div.WikiData {
+   max-height: 91.8vh;
+   overflow-y: scroll;
+   margin: 0.3rem 0.3rem 0 0.15rem;
+   border-radius: $radius;
+   background-color: $white2;
+   h2, h3, p {
+      display: block;
+      text-align: center;
+   }
+   p.summary {
+      margin: 2rem 1rem 4rem;
+      text-align: left;
+   }
+}
+img.countryFlag {
+   display: block;
+   width: 40%;
+   height: auto;
+   margin: auto;
+}
+div.imgContainer {
+   p {
+      margin: 0.5rem 1rem 1.5rem;
+      text-align: center;
+      font-size: calc(7px + 1vmin);
+   }
+}
+img.countryImg {
+   display: block;
+   width: 80%;
+   margin: 0 auto;
+}

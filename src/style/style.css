@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #F3F3F3;
+}
+
+.App {
+  justify-content: center;
+  background-color: #F3F3F3;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header {
+  text-align: center;
+}
+
+h1 {
+  margin: 0.3rem 0.3rem 0;
+  font-size: calc(24px + 2vmin);
+  color: #222;
+  background-color: #ADA7C9;
+  border-radius: 5px;
+}
+
+div.svgContainer {
+  width: 100%;
+  height: 91.8vh;
+  margin: 0.3rem 0.15rem 0 0.3rem;
+  border-radius: 5px;
+  background-color: #E0E0E0;
+}
+
+svg.GlobeMap {
+  width: 55vw;
+  height: 100%;
+}
+
+g .sphere {
+  fill: #0848D4;
+}
+g .country {
+  fill: #00CCC4;
+  stroke: #007A75;
+  stroke-width: 0.3;
+  transition: fill 0.2s;
+}
+g .country:hover {
+  fill: #FFC400;
+}
+g .graticule {
+  stroke: #F3F3F3;
+  stroke-width: 0.25;
+  opacity: 0.5;
+  fill: none;
+}
+
+div.Tooltip {
+  position: absolute;
+  top: 4.5rem;
+  left: 1.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 1em;
+  margin-left: 0.5em;
+  font-size: 0.85rem;
+  z-index: 1;
+  color: #F3F3F3;
+  background-color: #222;
+  border-radius: 5px;
+  pointer-events: none;
+  transition: opacity, 0.5s;
+}
+
+div.WikiData {
+  max-height: 91.8vh;
+  overflow-y: scroll;
+  margin: 0.3rem 0.3rem 0 0.15rem;
+  border-radius: 5px;
+  background-color: #E0E0E0;
+}
+div.WikiData h2, div.WikiData h3, div.WikiData p {
+  display: block;
+  text-align: center;
+}
+div.WikiData p.summary {
+  margin: 2rem 1rem 4rem;
+  text-align: left;
+}
+
+img.countryFlag {
+  display: block;
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+div.imgContainer p {
+  margin: 0.5rem 1rem 1.5rem;
+  text-align: center;
+  font-size: calc(7px + 1vmin);
+}
+
+img.countryImg {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  margin: 0.3rem 0.3rem 0.3rem;
+  padding: 0.25em 0;
+  border-radius: 5px;
+  background-color: #ADA7C9;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #222;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+div.Tooltip {
+   position: absolute;
+   top: 4.5rem; left: 1.2rem;
+   width: fit-content;
+   height: fit-content;
+   padding: 0 1em;
+   margin-left: 0.5em;
+   font-size: 0.85rem;
+   z-index: 1;
+   color: $white1;
+   background-color: #222;
+   border-radius: $radius;
+   pointer-events: none;
+   transition: opacity, 0.5s;
+}

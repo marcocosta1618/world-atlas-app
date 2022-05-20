@@ -1,0 +1,35 @@
+//@import "../variables";
+
+div.svgContainer {
+   width: 100%;
+   height: 91.8vh;
+   margin: 0.3rem 0.15rem 0 0.3rem;
+   border-radius: $radius;
+   background-color: $white2;
+}
+
+svg.GlobeMap {
+   width: 55vw;
+   height: 100%;
+}
+
+g {
+   .sphere {
+      fill: #0848D4;
+   }
+   .country {
+      fill: #00CCC4;
+      stroke: #007A75;
+      stroke-width: 0.3;
+      &:hover {
+         fill: #FFC400;
+      }
+      transition: fill 0.2s;
+   }
+   .graticule {
+      stroke: #F3F3F3;
+      stroke-width: 0.25;
+      opacity: 0.5;
+      fill: none;
+   }
+}

@@ -1,0 +1,10 @@
+* {
+   box-sizing: border-box;
+}
+
+@import "./containers/containers";
+@import "./components/Header";
+@import "./components/GlobeMap";
+@import "./components/Tooltip";
+@import "./components/WikiData";
+@import "./components/Footer";
