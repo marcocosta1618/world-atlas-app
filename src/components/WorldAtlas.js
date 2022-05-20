@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useData } from "./customHooks/useData"
 import { WikiData } from "./WikiData"
 import { geoOrthographic, geoPath, geoGraticule, select, drag } from "d3"
@@ -16,6 +16,7 @@ export const WorldAtlas = ({ dim }) => {
       setIsLoading(false)
    }, [geoData])
 
+   const svgRef = useRef()
    const { Tooltip, showTooltip, hideTooltip } = useTooltip()
 
    const projection = geoOrthographic()
@@ -51,6 +52,7 @@ export const WorldAtlas = ({ dim }) => {
                width={dim.w} height={dim.h}
                viewBox={`0 0 ${dim.w} ${dim.h}`}
                preserveAspectRatio='xMidYMid meet'
+               ref={svgRef}
             >
                <g className='globe'>
                   {/* Sphere */}
@@ -65,10 +67,10 @@ export const WorldAtlas = ({ dim }) => {
                         onClick={() => {
                            setCountry(feature.properties.name);
                         }}
-                        onMouseEnter={e => showTooltip(e)}
+                        onMouseEnter={e => showTooltip(e, svgRef.current, dim)}
                         onMouseLeave={e => hideTooltip(e)}
                      >
-                        <title>{feature.properties.name}</title>
+                        {/* <title>{feature.properties.name}</title> */}
                      </path>
                   ))}
                   {/* <path d={path({ type: 'Point', coordinates: [0, 0] })} /> */}
