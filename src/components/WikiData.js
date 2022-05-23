@@ -1,7 +1,7 @@
 import wiki from "wikipedia"
 import { useState, useEffect, useRef } from "react"
-import { handleNames } from "./helperFunctions/handleNames"
-import { filterImages } from "./helperFunctions/filterImages"
+import { handleNames } from "../helperFunctions/handleNames"
+import { filterImages } from "../helperFunctions/filterImages"
 
 export const WikiData = ({ country }) => {
 

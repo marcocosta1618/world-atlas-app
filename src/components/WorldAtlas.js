@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react"
-import { useData } from "./customHooks/useData"
+import { useData } from "../customHooks/useData"
 import { WikiData } from "./WikiData"
 import { geoOrthographic, geoPath, geoGraticule, select, drag } from "d3"
-import { useTooltip } from "./customHooks/useTooltip"
-import { versorDrag } from "./helperFunctions/versorDrag"
+import { useTooltip } from "../customHooks/useTooltip"
+import { versorDrag } from "../helperFunctions/versorDrag"
 
 export const WorldAtlas = ({ dim }) => {
    // eslint-disable-next-line
