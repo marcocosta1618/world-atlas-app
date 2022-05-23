@@ -1,12 +1,10 @@
-@import "../variables";
-
 .Header {
    text-align: center;
 }
 h1 {
    margin: 0.3rem 0.3rem 0;
    font-size: calc(24px + 2vmin);
-   color: #222;
+   color: $black;
    background-color: $cadetBlue;
    border-radius: $radius;
 }
