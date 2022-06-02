@@ -8,26 +8,27 @@ import { versorDrag } from "../helperFunctions/versorDrag"
 export const WorldAtlas = ({ dim }) => {
    // eslint-disable-next-line
    const [isLoading, setIsLoading] = useState(true) // 1
-   const { geoData, initCountry } = useData()
+   const { lowResTopology, highResTopology, initCountry } = useData()
+   const [resolution, setResolution] = useState(highResTopology)
    const [country, setCountry] = useState(null)
    const [rotation, setRotation] = useState([0, 0, 0])
 
    useEffect(() => { // 1
       setIsLoading(false)
-   }, [geoData])
+   }, [highResTopology])
 
-   const svgRef = useRef()
+   const svgRef = useRef() // 2
    const { Tooltip, showTooltip, hideTooltip } = useTooltip()
 
    const projection = geoOrthographic()
-      .translate([dim.w / 2, dim.h / 2]) // 2
-      .scale(300)                        // 3
+      .translate([dim.w / 2, dim.h / 2]) // 3
+      .scale(300)                        // 4
       .rotate(rotation)
    const path = geoPath(projection)
    const graticule = geoGraticule()
 
    // rotate the globe (D3 drag and versor pkg update rotation state)
-   const { dragStart, dragged, dragEnd } = versorDrag(projection, setRotation)
+   const { dragStart, dragged, dragEnd } = versorDrag(projection, setRotation, setResolution, lowResTopology, highResTopology)
 
    const globe = select('g.globe')
 
@@ -39,7 +40,7 @@ export const WorldAtlas = ({ dim }) => {
    // (add support for touch devices)
 
    // render
-   if (!(geoData || initCountry)) {
+   if (!(resolution || initCountry)) {
       return (
          <div className='layout'>'Loading...'</div>
       )
@@ -56,9 +57,9 @@ export const WorldAtlas = ({ dim }) => {
             >
                <g className='globe'>
                   {/* Sphere */}
-                  <path className='sphere' d={path({ type: 'Sphere' })}></path> {/* 4 */}
+                  <path className='sphere' d={path({ type: 'Sphere' })}></path> {/* 5 */}
                   {/* Countries */}
-                  {geoData.features.map(feature => (
+                  {resolution.features.map(feature => (
                      <path
                         className='country'
                         d={path(feature)}
@@ -70,7 +71,6 @@ export const WorldAtlas = ({ dim }) => {
                         onMouseEnter={e => showTooltip(e, svgRef.current, dim)}
                         onMouseLeave={e => hideTooltip(e)}
                      >
-                        {/* <title>{feature.properties.name}</title> */}
                      </path>
                   ))}
                   {/* <path d={path({ type: 'Point', coordinates: [0, 0] })} /> */}
@@ -87,7 +87,8 @@ export const WorldAtlas = ({ dim }) => {
 /*
 1) Forcing a re-render with a dummy state for lines 38-44 (which assign D3 drag behavior to 'globe' selection) 
    to have an effect ('globe' is null after the first render)
-2) The default translation offset places ⟨0°,0°⟩ at the center of a 960×500 area.
-3) geoOrtographic projection default scale value is 249.5.
-4) Renders the globe surface passing an object of type 'Sphere' to geoPath 
+2) A reference to the svg DOM element to calculate its dims (for positioning the Tooltip)
+3) The default translation offset places ⟨0°,0°⟩ at the center of a 960×500 area.
+4) geoOrtographic projection default scale value is 249.5.
+5) Renders the globe surface passing an object of type 'Sphere' to geoPath 
 */

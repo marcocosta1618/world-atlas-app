@@ -12,7 +12,7 @@ export const WikiData = ({ country }) => {
 
    useEffect(() => {
       async function fetchWikiData(searchStr) {
-         // console.log(searchStr)
+         console.log(searchStr) // log country name
          // scroll to top when clicking on a country 
          const scrollToTop = {top: 0, behavior: 'smooth'}
          wikiDataDiv.current && wikiDataDiv.current.scroll(scrollToTop)

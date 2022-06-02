@@ -1,9 +1,16 @@
 import versor from "versor"
 
-export const versorDrag = (projection, setRotation) => {
+export const versorDrag = (
+   projection,
+   setRotation, 
+   setResolution, 
+   lowResTopology, 
+   highResTopology) => {
+      
    let q0, v0, r0;
    const dragStart = e => {
       if (e.type === 'start') {
+         setResolution(lowResTopology)
          v0 = versor.cartesian(projection.invert([e.x, e.y]))
          r0 = projection.rotate()
          q0 = versor(r0)
@@ -19,6 +26,7 @@ export const versorDrag = (projection, setRotation) => {
    }
    const dragEnd = e => {
       if (e.type === 'end') {
+         setResolution(highResTopology)
          console.log('end')
       } 
    }
