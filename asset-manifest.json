@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/world-atlas-app/static/css/main.e8c727f8.css",
-    "main.js": "/world-atlas-app/static/js/main.10732ed8.js",
+    "main.css": "/world-atlas-app/static/css/main.f1dbfa2b.css",
+    "main.js": "/world-atlas-app/static/js/main.ad663cd6.js",
     "static/js/787.58b4b8b8.chunk.js": "/world-atlas-app/static/js/787.58b4b8b8.chunk.js",
     "index.html": "/world-atlas-app/index.html",
-    "main.e8c727f8.css.map": "/world-atlas-app/static/css/main.e8c727f8.css.map",
-    "main.10732ed8.js.map": "/world-atlas-app/static/js/main.10732ed8.js.map",
+    "main.f1dbfa2b.css.map": "/world-atlas-app/static/css/main.f1dbfa2b.css.map",
+    "main.ad663cd6.js.map": "/world-atlas-app/static/js/main.ad663cd6.js.map",
     "787.58b4b8b8.chunk.js.map": "/world-atlas-app/static/js/787.58b4b8b8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8c727f8.css",
-    "static/js/main.10732ed8.js"
+    "static/css/main.f1dbfa2b.css",
+    "static/js/main.ad663cd6.js"
   ]
 }
