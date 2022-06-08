@@ -1,15 +1,15 @@
 //@import "../variables";
 
 div.svgContainer {
-   width: 100%;
-   height: 91.8vh;
-   margin: 0.3rem 0.15rem 0 0.3rem;
+   width: 56vw;
+   height: 91.95vh;
+   margin: 0.3rem 0.175rem 0 0.3rem;
    border-radius: $radius;
    background-color: $white2;
 }
 
 svg.GlobeMap {
-   width: 55vw;
+   width: 100%;
    height: 100%;
 }
 

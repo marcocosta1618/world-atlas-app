@@ -1,9 +1,10 @@
 @import "../variables";
 
 div.WikiData {
-   max-height: 91.8vh;
+   width: 44vw;
+   max-height: 91.95vh;
    overflow-y: scroll;
-   margin: 0.3rem 0.3rem 0 0.15rem;
+   margin: 0.3rem 0.3rem 0 0.175rem;
    border-radius: $radius;
    background-color: $white2;
    h2, h3, p {

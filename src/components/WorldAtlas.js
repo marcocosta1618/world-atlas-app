@@ -38,7 +38,10 @@ export const WorldAtlas = ({ dim }) => {
    // render
    if (!topology || isLoading) {
       return (
-         <div className='layout'>'Loading...'</div>
+         <div className='layout'>
+            <div className='svgContainer'></div>
+            <WikiData></WikiData>
+         </div>
       )
    }
    return (
