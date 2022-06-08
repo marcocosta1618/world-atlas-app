@@ -20,7 +20,7 @@ This App is deployed on [Github pages](https://marcocosta1618.github.io/world-at
 ---
 
 ### TODO:
-+ render the globe with a higher resolution topojson file and use a smaller resolution file while dragging the globe;
++ ~~render the globe with a higher resolution topojson file and use a smaller resolution file while dragging the globe;~~
 + render geographical coordinates on the screen when hovering the cursor over the globe;
 + fix CORS issue;
 + mobile layout and optimizations;
