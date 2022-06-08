@@ -8,27 +8,26 @@ export const useData = () => {
    const topoJson50mURL = "https://unpkg.com/world-atlas@2.0.2/countries-50m.json"
 
    const [data, setData] = useState({})
+   const [isLoading, setIsLoading] = useState(true)
 
    useEffect(() => {
-      // fetch topoJsons, convert them to geoJson, and save them as state,
-      // along a randomly choosen country for the first render
       Promise.all([
          json(topoJson110mURL),
          json(topoJson50mURL)
-      ]).then(([lowResJson, highResJson]) => {
-         const countriesLowRes = lowResJson.objects.countries
-         const countriesHighRes = highResJson.objects.countries
-         // pick a random country
-         const randIdx = Math.round(Math.random() * countriesHighRes.geometries.length)
-         const initCountry = countriesHighRes.geometries[randIdx].properties.name
+      ]).then(([loResJson, hiResJson]) => {
+         const countriesLoRes = loResJson.objects.countries
+         const countriesHiRes = hiResJson.objects.countries
+         // pick a random country (note: move this in WorldAtlas.js)
+         const randIdx = Math.round(Math.random() * countriesHiRes.geometries.length)
+         const initCountry = countriesHiRes.geometries[randIdx].properties.name
          // set state
          setData({
-            lowResTopology: feature(lowResJson, countriesLowRes),
-            highResTopology: feature(highResJson, countriesHighRes),
-            initCountry
+            loResTopology: feature(loResJson, countriesLoRes),
+            hiResTopology: feature(hiResJson, countriesHiRes),
+            initCountry,
          })
+         setIsLoading(false)
       })
-   }, [])
-
+   }, [isLoading])
    return data
 }
