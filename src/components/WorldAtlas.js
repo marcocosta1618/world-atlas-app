@@ -6,16 +6,23 @@ import { versorDrag } from "../helperFunctions/versorDrag"
 import { WikiData } from "./WikiData"
 
 export const WorldAtlas = ({ dim }) => {
-   const { loResTopology, hiResTopology, initCountry, isLoading } = useData()
+   const { loResTopology, hiResTopology, isLoading } = useData()
    const [topology, setTopology] = useState(null)
+   const [initCountry, setInitCountry] = useState(null)
    const [country, setCountry] = useState(null)
    const [rotation, setRotation] = useState([0, 0, 0])
    const svgRef = useRef() // 1
    const { Tooltip, showTooltip, hideTooltip } = useTooltip()
 
    useEffect(() => { // 2
-      setTopology(hiResTopology)
+      hiResTopology && setTopology(hiResTopology)
    }, [isLoading, hiResTopology])
+   useEffect(() => {
+      if (!initCountry && hiResTopology) {
+         const randIdx = Math.round(Math.random() * hiResTopology.features.length)
+         setInitCountry(hiResTopology.features[randIdx].properties.name)
+      }
+   }, [initCountry, hiResTopology])
 
    const projection = geoOrthographic()
       .translate([dim.w / 2, dim.h / 2]) // 3

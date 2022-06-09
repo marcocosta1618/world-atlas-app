@@ -17,14 +17,10 @@ export const useData = () => {
       ]).then(([loResJson, hiResJson]) => {
          const countriesLoRes = loResJson.objects.countries
          const countriesHiRes = hiResJson.objects.countries
-         // pick a random country (note: move this in WorldAtlas.js)
-         const randIdx = Math.round(Math.random() * countriesHiRes.geometries.length)
-         const initCountry = countriesHiRes.geometries[randIdx].properties.name
          // set state
          setData({
             loResTopology: feature(loResJson, countriesLoRes),
             hiResTopology: feature(hiResJson, countriesHiRes),
-            initCountry,
          })
          setIsLoading(false)
       })
