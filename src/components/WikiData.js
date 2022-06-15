@@ -36,7 +36,7 @@ export const WikiData = ({ country }) => {
    }, [country])
 
    if (!(summary || images)) {
-      return <div className='WikiData'></div>
+      return <div className='WikiData loading'></div>
    }
    return (
       <div className='WikiData' ref={wikiDataDiv}>

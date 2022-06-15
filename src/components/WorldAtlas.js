@@ -46,7 +46,7 @@ export const WorldAtlas = ({ dim }) => {
    if (!topology || isLoading) {
       return (
          <div className='layout'>
-            <div className='svgContainer'></div>
+            <div className='svgContainer loading'></div>
             <WikiData></WikiData>
          </div>
       )

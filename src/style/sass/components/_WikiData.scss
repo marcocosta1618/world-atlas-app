@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 div.WikiData {
    width: 44vw;
@@ -16,6 +17,10 @@ div.WikiData {
       text-align: left;
    }
 }
+.loading {
+   @include isLoading;
+}
+
 img.countryFlag {
    display: block;
    width: 40%;

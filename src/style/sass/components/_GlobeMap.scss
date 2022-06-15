@@ -1,4 +1,4 @@
-//@import "../variables";
+@import "../mixins";
 
 div.svgContainer {
    width: 56vw;
@@ -6,6 +6,9 @@ div.svgContainer {
    margin: 0.3rem 0.175rem 0 0.3rem;
    border-radius: $radius;
    background-color: $white2;
+}
+.loading {
+   @include isLoading;
 }
 
 svg.GlobeMap {
