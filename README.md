@@ -22,14 +22,15 @@ This App is deployed on [Github pages](https://marcocosta1618.github.io/world-at
 ### TODO:
 + ~~render the globe with a higher resolution topojson file and use a smaller resolution file while dragging the globe;~~
 + render geographical coordinates on the screen when hovering the cursor over the globe;
-+ fix CORS issue;
++ fix CORS issue*;
 + mobile layout and optimizations;
 + add support for touch gestures;
 + add color schemes and color schemes switch;
 + ~~fix tooltip width in Safari;~~
 
-#### Note
-At the moment some browsers won't render the Wikipedia information because of the Same Origin Policy. This will be fixed, meanwhile you can temporarily allow CORS with browser extensions (e.g., [CorsE](https://github.com/spenibus/cors-everywhere-firefox-addon) for Firefox), or disabling Cross-Origin restrictions (e.g., from the Develop menu in Safari).
+#### Notes
+\* At the moment some browsers won't render the Wikipedia information because of the Same Origin Policy. The issue will be fixed using a different npm package or the Wikipedia API. Meanwhile, you can temporarily allow CORS with browser extensions (e.g., [CorsE](https://github.com/spenibus/cors-everywhere-firefox-addon) for Firefox), or disabling Cross-Origin restrictions (e.g., from the Develop menu in Safari).
+The app works as expected in Chrome.
 
 ---
 
