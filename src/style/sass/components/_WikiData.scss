@@ -4,7 +4,7 @@
 div.WikiData {
    width: 44vw;
    max-height: 91.95vh;
-   overflow-y: scroll;
+   overflow: hidden scroll;
    margin: 0.3rem 0.3rem 0 0.175rem;
    border-radius: $radius;
    background-color: $white2;
@@ -38,4 +38,5 @@ img.countryImg {
    display: block;
    width: 80%;
    margin: 0 auto;
+   border-radius: calc($radius * 2);
 }
