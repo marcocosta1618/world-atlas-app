@@ -10,8 +10,8 @@ body {
 }
 
 .App {
-  justify-content: center;
   background-color: #F3F3F3;
+  border: 1px solid red;
 }
 
 .layout {
@@ -20,6 +20,28 @@ body {
   height: 93.2vh;
 }
 
+div.svgContainer {
+  width: 56vw;
+  height: 91.95vh;
+  margin: 0.3rem 0.175rem 0 0.3rem;
+  border-radius: 5px;
+  background-color: #E0E0E0;
+}
+
+@media only screen and (max-width: 48em) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  div.svgContainer {
+    width: calc(100% - 0.6rem);
+    height: auto;
+    margin: 0.3rem 0.3rem 0;
+    padding: 0 20vw;
+  }
+}
 .Header {
   text-align: center;
 }
@@ -43,14 +65,6 @@ h1 {
     transform: translateX(100%);
   }
 }
-div.svgContainer {
-  width: 56vw;
-  height: 91.95vh;
-  margin: 0.3rem 0.175rem 0 0.3rem;
-  border-radius: 5px;
-  background-color: #E0E0E0;
-}
-
 .loading {
   position: relative;
 }
@@ -148,6 +162,7 @@ div.WikiData p.summary {
 img.countryFlag {
   display: block;
   width: 40%;
+  min-width: 180px;
   height: auto;
   margin: auto;
 }
@@ -165,6 +180,20 @@ img.countryImg {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 48em) {
+  div.WikiData {
+    width: calc(100% - 0.6rem);
+    margin: 0.3rem 0.3rem;
+  }
+
+  div.fadeBack {
+    background: linear-gradient(180deg, #E0E0E0, 80%, rgba(224, 224, 224, 0));
+  }
+
+  img.countryFlag {
+    width: 30%;
+  }
+}
 footer {
   text-align: center;
   margin: 0rem 0.3rem 0.3rem;

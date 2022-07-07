@@ -17,6 +17,7 @@ div.WikiData {
       text-align: left;
    }
 }
+// div for loading animation
 .loading {
    @include isLoading;
 }
@@ -24,6 +25,7 @@ div.WikiData {
 img.countryFlag {
    display: block;
    width: 40%;
+   min-width: 180px;
    height: auto;
    margin: auto;
 }
@@ -39,4 +41,18 @@ img.countryImg {
    width: 80%;
    margin: 0 auto;
    border-radius: calc($radius * 2);
+}
+
+// 768px
+@media only screen and (max-width: $breakpoint1) {
+   div.WikiData {
+      width: calc(100% - 0.6rem);
+      margin: 0.3rem 0.3rem;
+   }
+   div.fadeBack {
+      background: linear-gradient(180deg, $white2, 80%, rgba(224, 224, 224, 0));
+   }
+   img.countryFlag {
+      width: 30%;
+   }
 }

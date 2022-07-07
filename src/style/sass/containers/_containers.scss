@@ -10,12 +10,35 @@ body {
 }
 
 .App {
-   justify-content: center;
    background-color: $white1;
+   border: 1px solid red;
 }
 
 .layout {
    display: flex;
    justify-content: space-between;
    height: 93.2vh;
+}
+
+div.svgContainer {
+   width: 56vw;
+   height: 91.95vh;
+   margin: 0.3rem 0.175rem 0 0.3rem;
+   border-radius: $radius;
+   background-color: $white2;
+}
+
+// 768px
+@media only screen and (max-width: $breakpoint1) {
+   .layout {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+   }
+   div.svgContainer {
+      width: calc(100% - 0.6rem);
+      height: auto;
+      margin: 0.3rem 0.3rem 0;
+      padding: 0 20vw;
+   }
 }
