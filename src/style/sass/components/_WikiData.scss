@@ -12,6 +12,15 @@ div.WikiData {
       display: block;
       text-align: center;
    }
+   h2 {
+      font-size: calc(16px + 2vmin);
+   }
+   h3 {
+      font-size: calc(9px + 2vmin);
+   }
+   p {
+      font-size: calc(11px + 1vmin);
+   }
    p.summary {
       margin: 2rem 1rem 4rem;
       text-align: left;
@@ -33,7 +42,7 @@ div.imgContainer {
    p {
       margin: 0.5rem 1rem 1.5rem;
       text-align: center;
-      font-size: calc(7px + 1vmin);
+      font-size: calc(8px + 1vmin);
    }
 }
 img.countryImg {

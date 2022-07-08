@@ -47,7 +47,7 @@ div.svgContainer {
 
 h1 {
   margin: 0.3rem 0.3rem 0;
-  font-size: calc(24px + 2vmin);
+  font-size: calc(22px + 2vmin);
   color: #222;
   background-color: #ADA7C9;
   border-radius: 5px;
@@ -137,6 +137,15 @@ div.WikiData h2, div.WikiData h3, div.WikiData p {
   display: block;
   text-align: center;
 }
+div.WikiData h2 {
+  font-size: calc(16px + 2vmin);
+}
+div.WikiData h3 {
+  font-size: calc(9px + 2vmin);
+}
+div.WikiData p {
+  font-size: calc(11px + 1vmin);
+}
 div.WikiData p.summary {
   margin: 2rem 1rem 4rem;
   text-align: left;
@@ -169,7 +178,7 @@ img.countryFlag {
 div.imgContainer p {
   margin: 0.5rem 1rem 1.5rem;
   text-align: center;
-  font-size: calc(7px + 1vmin);
+  font-size: calc(8px + 1vmin);
 }
 
 img.countryImg {
@@ -202,7 +211,7 @@ footer {
 }
 footer p {
   margin: 0.5rem;
-  font-size: 0.9rem;
+  font-size: calc(10px + 1vmin);
   color: #222;
 }
 footer a {

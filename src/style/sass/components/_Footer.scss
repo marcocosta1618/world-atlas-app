@@ -6,7 +6,7 @@ footer {
    background-color: $cadetBlue;
    p {
       margin: 0.5rem;
-      font-size: 0.9rem;
+      font-size: calc(10px + 1vmin);
       color: $black;
    }
    a {
