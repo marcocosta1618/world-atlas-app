@@ -33,7 +33,6 @@ div.svgContainer {
     align-items: center;
     height: auto;
   }
-
   div.svgContainer {
     width: calc(100% - 0.6rem);
     height: auto;
@@ -47,6 +46,7 @@ div.svgContainer {
 
 h1 {
   margin: 0.3rem 0.3rem 0;
+  padding: 0.1em 0 0.1em;
   font-size: calc(22px + 2vmin);
   color: #222;
   background-color: #ADA7C9;
@@ -193,11 +193,9 @@ img.countryImg {
     width: calc(100% - 0.6rem);
     margin: 0.3rem 0.3rem;
   }
-
   div.fadeBack {
     background: linear-gradient(180deg, #E0E0E0, 80%, rgba(224, 224, 224, 0));
   }
-
   img.countryFlag {
     width: 30%;
   }
