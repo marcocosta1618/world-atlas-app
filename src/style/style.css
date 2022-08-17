@@ -144,7 +144,7 @@ div.WikiData h3 {
   font-size: calc(9px + 2vmin);
 }
 div.WikiData p {
-  font-size: calc(11px + 1vmin);
+  font-size: clamp(10px, 10px + 1vmin, 1em);
 }
 div.WikiData p.summary {
   margin: 2rem 1rem 4rem;
@@ -178,7 +178,7 @@ img.countryFlag {
 div.imgContainer p {
   margin: 0.5rem 1rem 1.5rem;
   text-align: center;
-  font-size: calc(8px + 1vmin);
+  font-size: clamp(9px, 9px + 1vmin, 0.9em);
 }
 
 img.countryImg {
@@ -209,7 +209,7 @@ footer {
 }
 footer p {
   margin: 0.5rem;
-  font-size: calc(10px + 1vmin);
+  font-size: clamp(10px, 10px + 1vmin, 1em);
   color: #222;
 }
 footer a {
