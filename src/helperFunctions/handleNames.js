@@ -22,7 +22,7 @@ export const handleNames = (country) => {
       case 'W. Sahara':
          country = 'Western Sahara'
          break;
-      default: return country
+      default: return country;
    }
-   return country
+   return country;
 } 

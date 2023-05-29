@@ -8,7 +8,6 @@ export const useData = () => {
    const topoJson50mURL = "https://unpkg.com/world-atlas@2.0.2/countries-50m.json"
 
    const [data, setData] = useState({})
-   const [isLoading, setIsLoading] = useState(true)
 
    useEffect(() => {
       Promise.all([
@@ -17,13 +16,15 @@ export const useData = () => {
       ]).then(([loResJson, hiResJson]) => {
          const countriesLoRes = loResJson.objects.countries
          const countriesHiRes = hiResJson.objects.countries
-         // set state
+         // pick a random init country
+         const randIdx = Math.round(Math.random() * countriesHiRes.geometries.length);
+         const initCountry = countriesHiRes.geometries[randIdx].properties.name;
          setData({
-            loResTopology: feature(loResJson, countriesLoRes),
-            hiResTopology: feature(hiResJson, countriesHiRes),
+            loResCountries: feature(loResJson, countriesLoRes),
+            hiResCountries: feature(hiResJson, countriesHiRes),
+            initCountry
          })
-         setIsLoading(false)
       })
-   }, [isLoading])
+   }, [])
    return data
 }
