@@ -1,6 +1,7 @@
 import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import { WorldAtlas } from "./components/WorldAtlas";
+import { Footer } from "./components/Footer";
+
 
 const dim = {
   w: 640,
