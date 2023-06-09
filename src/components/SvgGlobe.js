@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { geoOrthographic, geoPath, geoGraticule, select, drag } from "d3";
 import { versorDrag } from "../helperFunctions/versorDrag";
 import { useTooltip } from "../customHooks/useTooltip";
+import { ThemeContext } from "../App";
 
 export const SvgGlobe = ({
     dim,
@@ -11,6 +12,7 @@ export const SvgGlobe = ({
     hiResCountries,
     setCountry,
 }) => {
+    const theme = useContext(ThemeContext);
     const [rotation, setRotation] = useState([0, 0, 0]);
     const svgRef = useRef(null);            // (1)
     const { Tooltip, showTooltip, hideTooltip } = useTooltip();
@@ -41,7 +43,7 @@ export const SvgGlobe = ({
     return (
         <>
             <Tooltip/>
-            <div className='svgContainer'>
+            <div className={'svgContainer ' + theme}>
                 <svg className='GlobeMap'
                     width={dim.w} height={dim.h}
                     viewBox={`0 0 ${dim.w} ${dim.h}`}

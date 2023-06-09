@@ -1,9 +1,11 @@
 import wiki from "wikipedia";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { ThemeContext } from "../App";
 import { handleNames } from "../helperFunctions/handleNames";
 import { filterImages } from "../helperFunctions/filterImages";
 
 export const WikiData = ({ country }) => {
+   const theme = useContext(ThemeContext);
    const [summary, setSummary] = useState(null);
    const [images, setImages] = useState(null);
 
@@ -12,7 +14,7 @@ export const WikiData = ({ country }) => {
    useEffect(() => {
       async function fetchWikiData(searchStr) {
          if (searchStr === undefined) {
-            return
+            return;
          };
          // scroll to top when clicking on a country 
          const scrollToTop = {top: 0, behavior: 'smooth'};
@@ -37,10 +39,10 @@ export const WikiData = ({ country }) => {
    }, [country]);
 
    if (!(summary || images)) {
-      return <div className='WikiData loading'></div>
-   }
+      return <div className={'WikiData loading ' + theme}></div>
+   };
    return (
-      <div className='WikiData' ref={wikiDataDiv}>
+      <div className={'WikiData ' + theme} ref={wikiDataDiv}>
          <h2>{summary.title}</h2>
          <h3>{summary.description}</h3>
          <p className='coord'>
@@ -59,5 +61,5 @@ export const WikiData = ({ country }) => {
             </div>
          )}
       </div>
-   )
+   );
 }
