@@ -1,8 +1,13 @@
 // COLOR SCHEME
+// shared
 $cadetBlue: #ADA7C9;
 $white1: #F3F3F3; 
-$white2: #E0E0E0; // chinese white
-$black: #222; // raisin black
+$white2: #E0E0E0;  // chinese white
+$black1: #222;     // raisin black, try use #333 for dark theme
+// themes specific
+$black2: #333;        // jet
+$link-light: #9AB5F0; // jordy blue
+$link-dark: #06369C;  // egyptian blue
 
 // FONT SIZE RULES
 $normParag: clamp(10px, calc(10px + 1vmin), 1em);

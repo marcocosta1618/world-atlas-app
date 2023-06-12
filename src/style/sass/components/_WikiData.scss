@@ -25,6 +25,12 @@ div.WikiData {
       margin: 2rem 1rem 4rem;
       text-align: left;
    }
+   &.dark {
+      background-color: $black2;
+      h2, h3, p {
+         color: $white2;
+      }
+   }
 }
 // div for loading animation
 .loading {

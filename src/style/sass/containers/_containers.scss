@@ -11,6 +11,9 @@ body {
 
 .App {
    background-color: $white1;
+   &.dark {
+      background-color: $cadetBlue;
+   }
 }
 
 .layout {
@@ -25,6 +28,9 @@ div.svgContainer {
    margin: 0.3rem 0.175rem 0 0.3rem;
    border-radius: $radius;
    background-color: $white2;
+   &.dark {
+      background-color: $black2;
+   }
 }
 
 // 768px

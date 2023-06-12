@@ -13,11 +13,12 @@ export const ThemeContext = createContext('light');
 const App = () => {
 
   const [theme, setTheme] = useState('light');
+  const switchTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className={'App ' + theme}>
-        <Header />
+        <Header switchTheme={switchTheme}></Header>
         <WorldAtlas dim={dim}></WorldAtlas>
         <Footer />
       </div>

@@ -12,6 +12,9 @@ body {
 .App {
   background-color: #F3F3F3;
 }
+.App.dark {
+  background-color: #ADA7C9;
+}
 
 .layout {
   display: flex;
@@ -25,6 +28,9 @@ div.svgContainer {
   margin: 0.3rem 0.175rem 0 0.3rem;
   border-radius: 5px;
   background-color: #E0E0E0;
+}
+div.svgContainer.dark {
+  background-color: #333;
 }
 
 @media only screen and (max-width: 48em) {
@@ -43,8 +49,7 @@ div.svgContainer {
 .Header {
   text-align: center;
 }
-
-h1 {
+.Header h1 {
   margin: 0.3rem 0.3rem 0;
   padding: 0.1em 0 0.1em;
   font-size: calc(22px + 2vmin);
@@ -52,11 +57,9 @@ h1 {
   background-color: #ADA7C9;
   border-radius: 5px;
 }
-
-@-webkit-keyframes loading {
-  100% {
-    transform: translateX(100%);
-  }
+.Header.dark h1 {
+  color: #E0E0E0;
+  background-color: #333;
 }
 
 @keyframes loading {
@@ -76,8 +79,7 @@ h1 {
   height: 100%;
   transform: translateX(-100%);
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  -webkit-animation: loading 1s infinite;
-          animation: loading 1s infinite;
+  animation: loading 1s infinite;
 }
 
 svg.GlobeMap {
@@ -150,6 +152,12 @@ div.WikiData p.summary {
   margin: 2rem 1rem 4rem;
   text-align: left;
 }
+div.WikiData.dark {
+  background-color: #333;
+}
+div.WikiData.dark h2, div.WikiData.dark h3, div.WikiData.dark p {
+  color: #E0E0E0;
+}
 
 .loading {
   position: relative;
@@ -163,8 +171,7 @@ div.WikiData p.summary {
   height: 100%;
   transform: translateX(-100%);
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  -webkit-animation: loading 1s infinite;
-          animation: loading 1s infinite;
+  animation: loading 1s infinite;
 }
 
 img.countryFlag {
@@ -214,4 +221,13 @@ footer p {
 }
 footer a {
   color: #06369C;
+}
+footer.dark {
+  background-color: #333;
+}
+footer.dark p {
+  color: #E0E0E0;
+}
+footer.dark a {
+  color: #9AB5F0;
 }/*# sourceMappingURL=style.css.map */

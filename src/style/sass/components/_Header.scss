@@ -1,12 +1,18 @@
 .Header {
    text-align: center;
+   h1 {
+      margin: 0.3rem 0.3rem 0;
+      padding: 0.1em 0 0.1em;
+      font-size: calc(22px + 2vmin);
+      color: $black1;
+      background-color: $cadetBlue;
+      border-radius: $radius;
+   }
+   &.dark {
+      h1 {
+         color: $white2;
+         background-color: $black2;
+      }
+   }
 }
 
-h1 {
-   margin: 0.3rem 0.3rem 0;
-   padding: 0.1em 0 0.1em;
-   font-size: calc(22px + 2vmin);
-   color: $black;
-   background-color: $cadetBlue;
-   border-radius: $radius;
-}

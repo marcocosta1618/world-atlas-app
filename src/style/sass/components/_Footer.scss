@@ -7,9 +7,18 @@ footer {
    p {
       margin: 0.5rem;
       font-size: $normParag;
-      color: $black;
+      color: $black1;
    }
    a {
-      color: #06369C;
+      color: $link-dark;
+   }
+   &.dark {
+      background-color: $black2;
+      p {
+         color: $white2;
+      }
+      a {
+         color: $link-light;
+      }
    }
 }
