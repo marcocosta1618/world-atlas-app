@@ -6,10 +6,10 @@ body {
    font-family: 'Ubuntu', sans-serif;
    // -webkit-font-smoothing: antialiased;
    // -moz-osx-font-smoothing: grayscale;
-   background-color: $white1;
 }
 
 .App {
+   border: 1px solid transparent; // make margin collapse
    background-color: $white1;
    &.dark {
       background-color: $cadetBlue;

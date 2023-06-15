@@ -6,10 +6,10 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Ubuntu", sans-serif;
-  background-color: #F3F3F3;
 }
 
 .App {
+  border: 1px solid transparent;
   background-color: #F3F3F3;
 }
 .App.dark {
