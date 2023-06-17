@@ -47,19 +47,61 @@ div.svgContainer.dark {
   }
 }
 .Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.24rem 0.3rem 0;
+  padding: 0.1em 0 0.1em;
   text-align: center;
+  border-radius: 5px;
+  background-color: #ADA7C9;
+}
+.Header.dark {
+  background-color: #333;
 }
 .Header h1 {
-  margin: 0.3rem 0.3rem 0;
+  margin: 0;
   padding: 0.1em 0 0.1em;
   font-size: calc(22px + 2vmin);
   color: #222;
-  background-color: #ADA7C9;
-  border-radius: 5px;
 }
 .Header.dark h1 {
   color: #E0E0E0;
+}
+
+.ThemeSwitchBox {
+  position: absolute;
+  right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  width: 50px;
+  height: 28px;
+  border: 2px solid #333;
+  border-radius: 20px;
+}
+.ThemeSwitchBox.dark {
+  border-color: #E0E0E0;
+}
+.ThemeSwitchBox.dark svg {
+  fill: #E0E0E0;
+}
+.ThemeSwitchBox div.ThemeSwitch {
+  margin: 0 1px;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #333;
+  border-radius: 20px;
   background-color: #333;
+}
+.ThemeSwitchBox div.ThemeSwitch.dark {
+  order: 1;
+  border-color: #E0E0E0;
+  background-color: #E0E0E0;
+}
+.ThemeSwitchBox svg {
+  fill: #333;
 }
 
 @keyframes loading {
