@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import { ThemeContext } from "../App";
 import { ThemeSwitchBox } from "./ThemeSwitchBox";
 
-export const Header = ({ switchTheme }) => {
-
-   const theme = useContext(ThemeContext);
+export const Header = ({ theme, switchTheme }) => {
 
    return (
-         <header className={'Header ' + theme }>
+         <header className={'Header'}>
             <h1>World Atlas</h1>
-            <ThemeSwitchBox switchTheme={switchTheme}></ThemeSwitchBox>
+            <ThemeSwitchBox theme={theme} switchTheme={switchTheme}></ThemeSwitchBox>
          </header>
    );
 }

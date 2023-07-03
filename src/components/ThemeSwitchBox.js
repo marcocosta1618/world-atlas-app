@@ -1,6 +1,3 @@
-import { useContext } from "react";
-import { ThemeContext } from "../App";
-
 const SunSvg = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +20,11 @@ const MoonSvg = (props) => (
   </svg>
 );
 
-export const ThemeSwitchBox = ({switchTheme}) => {
-    const theme = useContext(ThemeContext);
+export const ThemeSwitchBox = ({theme, switchTheme}) => {
 
     return (
-        <div className={"ThemeSwitchBox " + theme} onClick={switchTheme}>
-            <div className={"ThemeSwitch " + theme}></div>
+        <div className={"ThemeSwitchBox"} onClick={switchTheme}>
+            <div className={"ThemeSwitch"}></div>
             {theme === 'light'
               ? <SunSvg></SunSvg>
               : <MoonSvg></MoonSvg>}

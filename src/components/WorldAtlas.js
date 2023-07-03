@@ -1,14 +1,12 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { useData } from "../customHooks/useData";
 import { SvgGlobe } from "./SvgGlobe";
 import { WikiData } from "./WikiData";
-import { ThemeContext } from "../App";
 
 export const WorldAtlas = ({ dim }) => {
    const { loResCountries, hiResCountries, initCountry } = useData();
    const [topology, setTopology] = useState(null);
    const [country, setCountry] = useState(null);
-   const theme = useContext(ThemeContext);
 
    useEffect(() => {
       setTopology(hiResCountries);
@@ -19,7 +17,7 @@ export const WorldAtlas = ({ dim }) => {
    if (!topology) {
       return (
          <div className='layout'>
-            <div className={'svgContainer loading ' + theme}></div>
+            <div className={'svgContainer loading'}></div>
             <WikiData></WikiData>
          </div>
       )

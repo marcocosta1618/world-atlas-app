@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState } from "react";
 import { Header } from "./components/Header";
 import { WorldAtlas } from "./components/WorldAtlas";
 import { Footer } from "./components/Footer";
@@ -8,7 +8,6 @@ const dim = {
   h: 640
 };
 
-export const ThemeContext = createContext('light');
 
 const App = () => {
 
@@ -16,13 +15,12 @@ const App = () => {
   const switchTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
   return (
-    <ThemeContext.Provider value={theme}>
       <div className={'App ' + theme}>
-        <Header switchTheme={switchTheme}></Header>
+        <Header theme={theme} switchTheme={switchTheme}></Header>
         <WorldAtlas dim={dim}></WorldAtlas>
         <Footer />
       </div>
-    </ThemeContext.Provider>);
+  );
 }
 
 export default App;
