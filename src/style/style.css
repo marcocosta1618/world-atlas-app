@@ -10,10 +10,25 @@ body {
 
 .App {
   border: 1px solid transparent;
-  background-color: #F3F3F3;
+  background-color: var(--theme-bg1);
 }
-.App.dark {
-  background-color: #ADA7C9;
+
+.light {
+  --theme-bg1: #F3F3F3;
+  --theme-bg2: #ADA7C9;
+  --theme-bg3: #E0E0E0;
+  --theme-fg1: #333333;
+  --theme-text: #222;
+  --theme-switch-order: 0;
+}
+
+.dark {
+  --theme-bg1: #ADA7C9;
+  --theme-bg2: #333333;
+  --theme-bg3: #333333;
+  --theme-fg1: #E0E0E0;
+  --theme-text: #E0E0E0;
+  --theme-switch-order: 1;
 }
 
 .layout {
@@ -27,10 +42,7 @@ div.svgContainer {
   height: 91.95vh;
   margin: 0.3rem 0.175rem 0 0.3rem;
   border-radius: 5px;
-  background-color: #E0E0E0;
-}
-div.svgContainer.dark {
-  background-color: #333;
+  background-color: var(--theme-bg3);
 }
 
 @media only screen and (max-width: 48em) {
@@ -54,19 +66,13 @@ div.svgContainer.dark {
   padding: 0.1em 0 0.1em;
   text-align: center;
   border-radius: 5px;
-  background-color: #ADA7C9;
-}
-.Header.dark {
-  background-color: #333;
+  background-color: var(--theme-bg2);
 }
 .Header h1 {
   margin: 0;
   padding: 0.1em 0 0.1em;
   font-size: calc(22px + 2vmin);
-  color: #222;
-}
-.Header.dark h1 {
-  color: #E0E0E0;
+  color: var(--theme-text);
 }
 
 .ThemeSwitchBox {
@@ -78,30 +84,19 @@ div.svgContainer.dark {
   padding: 1px;
   width: 50px;
   height: 28px;
-  border: 2px solid #333;
+  border: 2px solid var(--theme-fg1);
   border-radius: 20px;
 }
-.ThemeSwitchBox.dark {
-  border-color: #E0E0E0;
-}
-.ThemeSwitchBox.dark svg {
-  fill: #E0E0E0;
+.ThemeSwitchBox svg {
+  fill: var(--theme-fg1);
 }
 .ThemeSwitchBox div.ThemeSwitch {
   margin: 0 1px;
   width: 17px;
   height: 17px;
-  border: 2px solid #333;
   border-radius: 20px;
-  background-color: #333;
-}
-.ThemeSwitchBox div.ThemeSwitch.dark {
-  order: 1;
-  border-color: #E0E0E0;
-  background-color: #E0E0E0;
-}
-.ThemeSwitchBox svg {
-  fill: #333;
+  background-color: var(--theme-fg1);
+  order: var(--theme-switch-order);
 }
 
 @keyframes loading {
@@ -175,7 +170,8 @@ div.WikiData {
   overflow: hidden scroll;
   margin: 0.3rem 0.3rem 0 0.175rem;
   border-radius: 5px;
-  background-color: #E0E0E0;
+  color: var(--theme-text);
+  background-color: var(--theme-bg3);
 }
 div.WikiData h2, div.WikiData h3, div.WikiData p {
   display: block;
@@ -193,12 +189,6 @@ div.WikiData p {
 div.WikiData p.summary {
   margin: 2rem 1rem 4rem;
   text-align: left;
-}
-div.WikiData.dark {
-  background-color: #333;
-}
-div.WikiData.dark h2, div.WikiData.dark h3, div.WikiData.dark p {
-  color: #E0E0E0;
 }
 
 .loading {
@@ -263,13 +253,4 @@ footer p {
 }
 footer a {
   color: #06369C;
-}
-footer.dark {
-  background-color: #333;
-}
-footer.dark p {
-  color: #E0E0E0;
-}
-footer.dark a {
-  color: #9AB5F0;
 }/*# sourceMappingURL=style.css.map */

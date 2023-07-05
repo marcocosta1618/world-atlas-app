@@ -7,28 +7,17 @@
     padding: 1px;
     width: 50px;
     height: 28px;
-    border: 2px solid $black2;
+    border: 2px solid var(--theme-fg1);
     border-radius: 20px;
-    &.dark {
-        border-color: $white2;
-        svg {
-            fill: $white2;
-        }
+    svg {
+        fill: var(--theme-fg1);
     }
     div.ThemeSwitch {
         margin: 0 1px;
         width: 17px;
         height: 17px;
-        border: 2px solid $black2;
         border-radius: 20px;
-        background-color: $black2;
-        &.dark {
-            order: 1;
-            border-color: $white2;
-            background-color: $white2;
-        }
-    }
-    svg {
-        fill: $black2
+        background-color: var(--theme-fg1);
+        order: var(--theme-switch-order);
     }
 }

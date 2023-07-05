@@ -7,7 +7,8 @@ div.WikiData {
    overflow: hidden scroll;
    margin: 0.3rem 0.3rem 0 0.175rem;
    border-radius: $radius;
-   background-color: $white2;
+   color: var(--theme-text);
+   background-color: var(--theme-bg3);
    h2, h3, p {
       display: block;
       text-align: center;
@@ -24,12 +25,6 @@ div.WikiData {
    p.summary {
       margin: 2rem 1rem 4rem;
       text-align: left;
-   }
-   &.dark {
-      background-color: $black2;
-      h2, h3, p {
-         color: $white2;
-      }
    }
 }
 // div for loading animation

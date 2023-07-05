@@ -12,13 +12,4 @@ footer {
    a {
       color: $link-dark;
    }
-   &.dark {
-      background-color: $black2;
-      p {
-         color: $white2;
-      }
-      a {
-         color: $link-light;
-      }
-   }
 }

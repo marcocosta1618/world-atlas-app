@@ -10,10 +10,24 @@ body {
 
 .App {
    border: 1px solid transparent; // make margin collapse
-   background-color: $white1;
-   &.dark {
-      background-color: $cadetBlue;
-   }
+   background-color: var(--theme-bg1);
+}
+
+.light {
+   --theme-bg1: #{$white1};
+   --theme-bg2: #{$cadetBlue};
+   --theme-bg3: #{$white2};
+   --theme-fg1: #{$black2};
+   --theme-text: #{$black1};
+   --theme-switch-order: 0;  // for flex children order of theme switcher
+}
+.dark {
+   --theme-bg1: #{$cadetBlue};
+   --theme-bg2: #{$black2};
+   --theme-bg3: #{$black2};
+   --theme-fg1: #{$white2};
+   --theme-text:  #{$white2};
+   --theme-switch-order: 1;
 }
 
 .layout {
@@ -27,10 +41,7 @@ div.svgContainer {
    height: 91.95vh;
    margin: 0.3rem 0.175rem 0 0.3rem;
    border-radius: $radius;
-   background-color: $white2;
-   &.dark {
-      background-color: $black2;
-   }
+   background-color: var(--theme-bg3);
 }
 
 // 768px
