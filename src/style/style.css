@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -43,6 +48,7 @@ div.svgContainer {
   margin: 0.3rem 0.175rem 0 0.3rem;
   border-radius: 5px;
   background-color: var(--theme-bg3);
+  transition: border-color 0.25s, color 0.25s, background-color 0.25s;
 }
 
 @media only screen and (max-width: 48em) {
@@ -58,6 +64,11 @@ div.svgContainer {
     padding: 0 20vw;
   }
 }
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
 .Header {
   display: flex;
   justify-content: center;
@@ -67,14 +78,21 @@ div.svgContainer {
   text-align: center;
   border-radius: 5px;
   background-color: var(--theme-bg2);
+  transition: border-color 0.25s, color 0.25s, background-color 0.25s;
 }
 .Header h1 {
   margin: 0;
   padding: 0.1em 0 0.1em;
   font-size: calc(22px + 2vmin);
   color: var(--theme-text);
+  transition: inherit;
 }
 
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
 .ThemeSwitchBox {
   position: absolute;
   right: 2%;
@@ -86,6 +104,7 @@ div.svgContainer {
   height: 28px;
   border: 2px solid var(--theme-fg1);
   border-radius: 20px;
+  transition: border-color 0.25s, color 0.25s, background-color 0.25s;
 }
 .ThemeSwitchBox svg {
   fill: var(--theme-fg1);
@@ -97,6 +116,7 @@ div.svgContainer {
   border-radius: 20px;
   background-color: var(--theme-fg1);
   order: var(--theme-switch-order);
+  transition: border-color 0.25s, color 0.25s, background-color 0.25s;
 }
 
 @keyframes loading {
@@ -172,6 +192,7 @@ div.WikiData {
   border-radius: 5px;
   color: var(--theme-text);
   background-color: var(--theme-bg3);
+  transition: border-color 0.25s, color 0.25s, background-color 0.25s;
 }
 div.WikiData h2, div.WikiData h3, div.WikiData p {
   display: block;

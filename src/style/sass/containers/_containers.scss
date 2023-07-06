@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 body {
    min-height: 100vh;
@@ -42,6 +43,7 @@ div.svgContainer {
    margin: 0.3rem 0.175rem 0 0.3rem;
    border-radius: $radius;
    background-color: var(--theme-bg3);
+   @include theme-transition;
 }
 
 // 768px

@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .Header {
    display: flex;
    justify-content: center;
@@ -7,10 +9,12 @@
    text-align: center;
    border-radius: $radius;
    background-color: var(--theme-bg2);
+   @include theme-transition;
    h1 {
       margin: 0;
       padding: 0.1em 0 0.1em;
       font-size: calc(22px + 2vmin);
       color: var(--theme-text);
+      transition: inherit;
    }
 }

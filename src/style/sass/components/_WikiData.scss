@@ -9,6 +9,7 @@ div.WikiData {
    border-radius: $radius;
    color: var(--theme-text);
    background-color: var(--theme-bg3);
+   @include theme-transition;
    h2, h3, p {
       display: block;
       text-align: center;
