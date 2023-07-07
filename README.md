@@ -20,12 +20,12 @@ This App is deployed on [Github pages](https://marcocosta1618.github.io/world-at
 ---
 
 ### TODO:
-+ ~~render the globe with a higher resolution topojson file and use a smaller resolution file while dragging the globe;~~
-+ render geographical coordinates on the screen when hovering the cursor over the globe;
-+ ~~fix CORS issue;~~
-+ ~~mobile layout and optimizations;~~
++ render geographical coordinates on the screen when hovering cursor over the globe;
++ use Unsplash api to get countries images;
 + add support for touch gestures;
-+ add color schemes and color schemes switch;
++ ~~render the globe with a higher resolution topojson file and use a smaller resolution file while dragging the globe;~~
++ ~~mobile layout and optimizations;~~
++ ~~add light/dark mode;~~
 + ~~fix tooltip width in Safari;~~
 
 ---
