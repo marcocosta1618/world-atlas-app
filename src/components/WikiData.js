@@ -1,11 +1,11 @@
 import wiki from "wikipedia";
 import { useState, useEffect, useRef } from "react";
 import { handleNames } from "../helperFunctions/handleNames";
-import { filterImages } from "../helperFunctions/filterImages";
+//import { filterImages } from "../helperFunctions/filterImages";
 
 export const WikiData = ({ country }) => {
    const [summary, setSummary] = useState(null);
-   const [images, setImages] = useState(null);
+   //const [images, setImages] = useState(null);
 
    const wikiDataDiv = useRef(null);
 
@@ -21,9 +21,9 @@ export const WikiData = ({ country }) => {
             const search = await wiki.search(searchStr, { limit: 1 });
             const page = await wiki.page(search.results[0].pageid);
             const summary = await page.summary();
-            const images = await page.images({ limit: 12 });
+            //const images = await page.images({ limit: 12 });
             setSummary(summary);
-            setImages(filterImages(images).slice(0, 6));
+            //setImages(filterImages(images).slice(0, 6));
          } catch (error) {
             console.log(error);
             return (
@@ -36,7 +36,7 @@ export const WikiData = ({ country }) => {
       fetchWikiData(handleNames(country));
    }, [country]);
 
-   if (!(summary || images)) {
+   if (!(summary /*|| images */)) {
       return <div className={'WikiData loading'}></div>
    };
    return (
@@ -52,12 +52,12 @@ export const WikiData = ({ country }) => {
          </p>
          <img className='countryFlag' alt={`${handleNames(country)} flag.`} src={summary.thumbnail.source}></img>
          <p className='summary'>{summary.extract}</p>
-         {images.map(img => 
+         {/* {images.map(img => 
             <div className='imgContainer' key={img.url}>
                <img className='countryImg' width='300' height='auto' alt={img.title} src={img.url}></img>
                <p>{img.title.replace('File:', '')}</p>
             </div>
-         )}
+         )} */}
       </div>
    );
 }
